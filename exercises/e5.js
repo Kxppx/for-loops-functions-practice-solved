@@ -5,8 +5,13 @@
 // getAllClientNames(bankAccounts) => ['Kevin', 'Spenser']
 
 export function getAllClientNames(array) {
-  // Your code goes here...
-
+  let arr = [];
+  for (let obj of array) {
+    if (obj.hasOwnProperty("name")) {
+      arr.push(obj.name);
+    }
+  }
+  return arr;
 }
 
 
